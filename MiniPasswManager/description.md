@@ -18,4 +18,4 @@ string.punctuation #Generates special characters.
 import random
 password += random.choice(characters)
 ```
-*Random* is used with it's <u>choice</u> method  to pick a random item in the "characters" list.
+*Random* is used with it's <u>choice</u> method  to pick a random item in the "characters" list and add it to our string "password".
