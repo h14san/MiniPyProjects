@@ -14,8 +14,11 @@ class Library:
 
     def remove_book(self, x_tit, x_auth):
         for bkks in self.books:
-            if x_tit == bkks.title and x_auth == bkks.author:
-                self.books.remove(bkks)
+            if x_tit not in bkks.title or x_auth not in bkks.author:
+                print(f"{x_tit} by {x_auth} not in Library")
+            else :
+                if x_tit == bkks.title and x_auth == bkks.author:
+                    self.books.remove(bkks)
 def main_menu():
     print("--------------")
     print("1. Show Books")
@@ -44,9 +47,14 @@ while True:
         bk = Book(b_tit, b_auth)
         lb = Library(bk)
     elif choice == 3:
-        a_tit = input("Book Title: ")
-        a_auth = input("Book Author: ")
-        lb.remove_book(a_tit,a_auth)
+        try:
+            lb
+        except NameError:
+            print("Library is Empty")
+        else:
+            a_tit = input("Book Title: ")
+            a_auth = input("Book Author: ")
+            lb.remove_book(a_tit, a_auth)
     elif choice == 4:
         break
     print (" ")
