@@ -17,7 +17,7 @@ def password_generator(min_length):
 while True:
     length = get_input("Choose number of characters for your password- ")
     if length >= 12:
-        print(f"Password Generated; {password_generator(length)}")
+        print(f"The Password Generated is; {password_generator(length)}")
         break
     else:
         print(f"{length} characters is too short for a strong password, we suggest you choose at least 12 characters")
