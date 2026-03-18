@@ -1,4 +1,4 @@
-<h1 align="center">San's MiniPyProject Run</h1>
+<h1 align="center">Python Microtoolkit Suite (PMTS)</h1>
 
 <p align="center">
 Collection of mini Python apps built in 1 month to train Python skills<br>
